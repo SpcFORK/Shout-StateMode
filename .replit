@@ -1,4 +1,4 @@
-run = "tsup; node index.js"
+run = "npm run dev"
 entrypoint = "index.ts"
 hidden = [".config", "package-lock.json", "tsconfig.json"]
 

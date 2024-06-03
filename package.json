@@ -1,14 +1,23 @@
 {
-  "name": "shoutstate",
-  "version": "0.0.1",
+  "name": "shoutmodes",
+  "version": "0.0.4",
   "description": "Shout State modes.",
   "main": "./dist/shoutstate.js",
   "scripts": {
-    "test": "tsup src"
+    "build": "./node_modules/.bin/esbuild src/shoutstate.ts --minify --sourcemap --outfile=dist/shoutstate.mjs",
+    "buildTst": "./node_modules/.bin/esbuild src/test.ts --minify --sourcemap --outfile=dist/test.mjs",
+    "dts": "node_modules/js2dts/dist/bin.js -d ./dist/shoutstate.d.mts src/shoutstate.ts",
+    "test": "node index.js",
+    "dev": "npm run build && npm run buildTst && npm run dts && npm run test"
   },
+  "exports": [
+    "./dist/shoutstate.js",
+    "./dist/shoutstate.d.ts",
+    "./global.ts"
+  ],
   "repository": {
     "type": "git",
-    "url": "@spcfork/shoutstate"
+    "url": "@spcfork/Shout-StateMode"
   },
   "keywords": [
     "lang"
@@ -16,12 +25,16 @@
   "author": "SpcFORK",
   "license": "MIT",
   "devDependencies": {
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3",
     "express": "^4.18.2",
     "mime": "^4.0.3",
     "mime-types": "^2.1.35",
-    "type-is": "^1.6.18"
+    "tsup": "^8.0.1",
+    "type-is": "^1.6.18",
+    "js2dts": "^0.3.3",
+    "typescript": "^5.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "shoutexp": "^0.1.8"
+  },
+  "types": "./dist/shoutstate.d.ts"
 }

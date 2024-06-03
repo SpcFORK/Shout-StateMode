@@ -10,7 +10,16 @@
 
 <body>
   Hello world
-  <script src="sless.js"></script>
+  
+  <script type="importmap">
+    {
+      "imports": {
+        "shoutexp": "./dist/shouts.mjs",
+        "shoutstate": "./shoutstate.mjs"
+      }
+    }
+  </script>
+  <script src="test.mjs" type="module"></script>
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

@@ -1,8 +1,5 @@
 const express = require("express");
 const path = require("path");
-const { Shouts } = require("./dist/shouts");
-
-console.log(Shouts);
 
 const app = express();
 
@@ -16,6 +13,9 @@ app.use(
   }),
   express.static('./dist', {
     extensions: ['js', 'css'],
+  }),
+  express.static('./node_modules/shoutexp', {
+    extensions: ['js'],
   })
 );
 

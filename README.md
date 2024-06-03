@@ -1,10 +1,15 @@
-# Shouts
+# Shoutmodes
 
-Shouts is a utility module for creating and managing dynamic variables (shouts) in a global context. These shouts can be accessed and modified globally, making it easier to manage state and data across different parts of your application.
+This project is designed to demonstrate the usage of shoutmodes.
 
-## Features
+## Introduction
 
-- **Dynamic Variables**: Create dynamic variables without knowing their return type.
-- **Global Access**: Access and modify shouts globally.
-- **Callbacks**: Define callbacks to be executed when shouts are accessed.
-- **Management**: Easily create, destroy, and check the existence of shouts.
+Shoutmodes allows users to create, customize, and utilize different shouting styles in their messages. Explore the different shoutmodes to elevate your communication!
+
+## Installation
+
+To get started with Shoutmodes, follow these simple steps:
+
+1. `npm i shoutmodes`.
+2. Install the necessary dependencies.
+3. Run the application and start shouting!
