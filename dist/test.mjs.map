@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/test.ts"],
-  "sourcesContent": ["import * as shoutstate from \"shoutstate\";\nimport type { CtxWithMode } from \"../global\";\n\nconst mode = shoutstate.createMode(\"test\", 3);\n\nlet ctx = globalThis as CtxWithMode<\"test\">;\n\nconsole.log(ctx);"],
-  "mappings": "aAAA,UAAYA,MAAgB,aAG5B,MAAMC,EAAOD,EAAW,WAAW,OAAQ,CAAC,EAE5C,IAAIE,EAAM,WAEV,QAAQ,IAAIA,CAAG",
-  "names": ["shoutstate", "mode", "ctx"]
+  "sourcesContent": ["import * as shoutstate from \"./shoutstate\";\nimport type { CtxWithMode } from \"../global\";\n\nlet ctx = globalThis as CtxWithMode<\"test\">;\nconst mode = shoutstate.createMode(\"test\", 3);\n\nctx.$$test\nctx.usetest\nctx.undotest\nctx.checktest\nctx.accesstest\nctx.lockUsetest"],
+  "mappings": "aAAA,UAAYA,MAAgB,eAG5B,IAAIC,EAAM,WACV,MAAMC,EAAOF,EAAW,WAAW,OAAQ,CAAC,EAE5CC,EAAI,OACJA,EAAI,QACJA,EAAI,SACJA,EAAI,UACJA,EAAI,WACJA,EAAI",
+  "names": ["shoutstate", "ctx", "mode"]
 }
